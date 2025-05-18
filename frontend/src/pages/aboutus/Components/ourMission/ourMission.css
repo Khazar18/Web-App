@@ -1,0 +1,111 @@
+/* OurMission Styles */
+
+
+.our-mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.our-mission-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--paragraph-color);
+}
+
+.our-mission-heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: var(--bold-heading-color);
+}
+
+.our-mission-paragraph {
+  color: var(--paragraph-color);
+  margin-top: 1rem;
+
+}
+
+.our-mission-list {
+  padding-left: 0px;
+}
+
+.our-mission-list ul {
+  margin-top: 0.7rem;
+  list-style-type:none; 
+  margin:0px;
+  padding:0px;
+}
+
+.our-mission-list li {
+  margin-bottom: 0.7rem;
+  padding-inline-start:0px;
+  text-indent:0px;
+  margin-left:0px;
+  padding-left:0px;
+}
+
+.our-mission-list li .highlight {
+  color: var(--primary-color);
+  padding:0px;
+  margin:0px;
+}
+
+.our-mission-image {
+  position: relative;
+  height: 400px;
+}
+
+.image-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .our-mission-container {
+    grid-template-columns: 1fr;
+    gap: 2rem; /* Reduce gap between image and text */
+    padding: 1rem 1rem;
+    text-align: left; /* Center-align text */
+  }
+
+  .our-mission-heading {
+    font-size: 1.75rem; /* Adjust heading size for smaller screens */
+  }
+
+  .our-mission-paragraph {
+    font-size: 1rem; /* Adjust paragraph size for readability */
+  }
+
+  .our-mission-list li {
+    font-size: 1rem; /* Maintain consistency in list items */
+  }
+
+  .our-mission-image {
+    height: 300px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .our-mission-container {
+    padding: 1rem 1rem;
+  }
+
+  .our-mission-heading {
+    font-size: 1.5rem; /* Further adjust heading size for smaller screens */
+  }
+
+  .our-mission-paragraph,
+  .our-mission-list li {
+    font-size: 0.9rem; /* Ensure readability on very small screens */
+  }
+
+  .our-mission-image {
+    height: 250px; /* Adjust image size further */
+  }
+}

@@ -1,0 +1,61 @@
+.bookmark-container {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+.bookmark-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-left {
+  display: flex;
+  align-items: center;
+  gap: 50px; 
+  position: relative;
+}
+
+.bookmark-icon {
+  width: 100%;
+  height: auto;
+}
+
+.bookmark-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.bookmark-title-k {
+  position: relative;
+  color: #333;
+  font-weight: bold;
+}
+
+.witch-hat-icon {
+  position: absolute;
+  top: -70px;
+  right: -150px;
+  width: 70px;
+  height: auto;
+}
+
+.wave-design {
+  position: relative;
+  bottom: 0;
+  right: -350px;
+  top: -110px;
+  width: 25%;
+  height: auto;
+}

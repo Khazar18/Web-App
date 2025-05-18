@@ -1,0 +1,23 @@
+.venture-header {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.venture-title {
+    z-index: 1;
+    font-size: 40px; 
+    color: #8e44ad;
+    margin: 0; 
+}
+
+.venture-graphics img {
+    width: 250px; 
+    height: 250px; 
+}
+.astronaut-graphics{
+    width: 250px;
+    height: 250px; 
+    padding-left: 50px;
+}

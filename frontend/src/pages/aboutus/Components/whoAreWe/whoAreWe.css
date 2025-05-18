@@ -1,0 +1,84 @@
+/* WhoAreWe Styles */
+.who-are-we-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.who-are-we-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.who-are-we-heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: var(--bold-heading-color);
+}
+
+.highlight {
+  color: var(--primary-color); /* Purple color */
+}
+
+.who-are-we-paragraph {
+  color: var(--paragraph-color);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.who-are-we-image {
+  position: relative;
+  height: 400px;
+}
+
+.image-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .who-are-we-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem;
+    grid-template-rows: auto auto; /* Stacks image and text vertically */
+    gap: 2rem; /* Reduce gap between image and text */
+    text-align: left; /* Align text to the left */
+  }
+
+  .who-are-we-image {
+    order: -1; /* Moves the image to the top */
+    height: 300px; /* Adjust image height for smaller screens */
+  }
+
+  .who-are-we-heading {
+    font-size: 1.75rem; /* Adjust heading size for smaller screens */
+  }
+
+  .who-are-we-paragraph {
+    font-size: 1rem; /* Adjust paragraph size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .who-are-we-container {
+    padding: 1rem 1rem;
+  }
+
+  .who-are-we-image {
+    height: 250px; /* Adjust image size for very small screens */
+  }
+
+  .who-are-we-heading {
+    font-size: 1.5rem; /* Further adjust heading size for smaller screens */
+  }
+
+  .who-are-we-paragraph {
+    font-size: 0.9rem; /* Ensure readability on small screens */
+  }
+}

@@ -1,0 +1,27 @@
+/* MainContent.css */
+.main-main-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.recentPostContainer {
+  display: flex;
+  gap: 2rem;
+  width: auto;
+  max-width: 90rem; /* Adjust based on your design needs */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Style for Post component when inside recentPostContainer */
+.recentPostContainer > *:first-child {
+  flex: 1;
+  min-width: 0; 
+}
+
+/* Style for Recentbar */
+.recentPostContainer > *:last-child {
+  /* width: 20rem;  */
+  flex-shrink: 0; 
+}

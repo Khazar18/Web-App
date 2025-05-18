@@ -1,0 +1,133 @@
+.user-section-container {
+    margin-top: 1rem;
+    /* This creates space for the navbar */
+    width: 100%;
+}
+
+.heroSectionCreatePost {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+    /* Or another light color */
+}
+
+
+.wave-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.wave-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user-profile {
+    position: absolute; /* Make it absolute for precise centering */
+    top: 80%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Adjust to perfectly center */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        height: 250px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .username {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: 200px;
+    }
+
+    .user-profile {
+        padding-top: 2rem;
+    }
+
+    .profile-image {
+        width: 90px;
+        height: 90px;
+        border-width: 3px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        height: 180px;
+    }
+
+    .user-profile {
+        padding-top: 1.5rem;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+
+    .username {
+        font-size: 1.1rem;
+        margin-top: 0.75rem;
+    }
+}
+
+/* Fix for very small screens */
+@media screen and (max-width: 320px) {
+    .hero-section {
+        height: 150px;
+    }
+
+    .profile-image {
+        width: 70px;
+        height: 70px;
+    }
+}

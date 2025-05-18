@@ -1,0 +1,98 @@
+/* General Overview Section */
+.overview {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.overview h2 {
+    color: var(--primary-color); /* Changed to primary color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Overview Content */
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.overview-text {
+    display: flex;
+    gap: 10px; /* Reduced gap between bar and paragraph */
+    align-items: flex-start; /* Align description bar with top of the paragraph */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+
+.overview-text p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0; /* Remove default margin for alignment */
+}
+
+/* Aligning the content horizontally */
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+/* Grid container for overview cards */
+.stats-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    column-gap: 10px; /* Reduced space between columns */
+    row-gap: 20px; /* Space between rows remains consistent */
+    justify-content: center; /* Center grid within the container */
+    align-items: center; /* Vertically center cards */
+}
+
+/* Overview card styled like course cards */
+.stat-box {
+    background-color: #ffffff;
+    width: 320px; /* Fixed card width */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color); /* Changed to primary color */
+}
+
+/* Adjusted icon style */
+.stat-icon {
+    font-size: 36px; /* Same size as course icon */
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    width: 60px; /* Larger icon container */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.stat-details {
+    text-align: center; /* Align text like course card */
+}
+
+.stat-label {
+    margin-bottom: 6px;
+    font-size: 18px; /* Match course card font size */
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-value {
+    color: #666;
+    font-size: 16px; /* Match description font size */
+}

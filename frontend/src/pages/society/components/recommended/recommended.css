@@ -1,0 +1,23 @@
+.recommended-societies {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.recommended-societies h2{
+  color: #202020;
+}
+.join-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.align-cards{
+  display: flex;
+  gap: 10px;
+}

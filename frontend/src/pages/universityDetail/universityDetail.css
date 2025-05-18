@@ -1,0 +1,15 @@
+.university-detail-container {
+  width: 100vw;
+  min-height: 100vh;
+}
+.main-content {
+  padding-top: 0.5rem; 
+  margin-top: 9vh;
+
+}
+
+.description-bar {
+    width: 6px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}

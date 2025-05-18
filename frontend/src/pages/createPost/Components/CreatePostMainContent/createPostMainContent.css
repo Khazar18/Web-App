@@ -1,0 +1,110 @@
+.main-content {
+    padding: 1rem;
+    max-width: 500rem;
+    margin: 0 0;
+  }
+  
+  .page-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .create-post-form {
+    background: transparent;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .required {
+    color: #e53e3e;
+    margin-left: 4px;
+  }
+  
+  .optional {
+    color: #718096;
+    font-size: 0.875rem;
+  }
+  
+  input[type="text"],
+  input[type="url"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.876);
+  }
+  
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  
+  .character-count {
+    display: block;
+    text-align: right;
+    color: #718096;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .file-upload {
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .uploaded-image {
+    max-height: 200px; /* Set the max height for the image */
+    width: auto;
+    object-fit: contain;
+    margin-top: 1rem;
+  }
+  .chooseFile{
+    color: #718096;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .post-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .post-button:hover {
+    background: #6b21a8;
+  }
+  

@@ -1,0 +1,241 @@
+.announcements-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+  width: 100%; 
+}
+
+
+.announcements-grid {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px; /* Default height for larger screens */
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement-card {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+  z-index: 0;
+}
+
+/* Active Card */
+.announcement-card.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Left Card */
+.announcement-card.left {
+  transform: translateX(-45%) scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Right Card */
+.announcement-card.right {
+  transform: translateX(45%) scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.announcement-image-container img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+
+.announcement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.announcement-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+}
+
+.announcement-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-content p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.status {
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+.date {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* Smaller for responsive */
+  height: 40px; /* Adjusted */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow.left {
+  left: -40px;
+}
+
+.carousel-arrow.right {
+  right: -40px;
+}
+
+/* Dots Navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .announcements-grid {
+    height: 300px; /* Reduced height for smaller screens */
+  }
+
+  .announcement-card {
+    width: 90%; /* Take more space on smaller screens */
+    height: 100%;
+  }
+
+  .announcement-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .announcement-content p {
+    font-size: 1rem;
+  }
+
+  .carousel-arrow {
+    width: 35px; /* Smaller arrows */
+    height: 35px;
+  }
+
+  .carousel-arrow.left {
+    left: -30px;
+  }
+
+  .carousel-arrow.right {
+    right: -30px;
+  }
+
+  .carousel-dots {
+    gap: 0.3rem; /* Reduced spacing between dots */
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .announcements-grid {
+    height: 250px; /* Reduced further for mobile */
+  }
+
+  .announcement-card {
+    width: 100%; /* Full width on very small screens */
+  }
+
+  .announcement-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .announcement-content p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-arrow {
+    width: 30px; /* Even smaller arrows */
+    height: 30px;
+  }
+
+  .carousel-arrow.left {
+    left: -20px;
+  }
+
+  .carousel-arrow.right {
+    right: -20px;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+  }
+}

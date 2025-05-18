@@ -1,0 +1,87 @@
+/* OurVision Styles */
+
+.our-vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.our-vision-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-vision-heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: var(--bold-heading-color);
+}
+
+.our-vision-paragraph {
+  color: var(--paragraph-color);
+  margin-top: 1rem;
+}
+
+.our-vision-paragraph .highlight {
+  color: var(--primary-color);
+  padding:0px;
+  margin:0px;
+}
+
+.our-vision-image {
+  position: relative;
+  height: 400px;
+}
+
+.image-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .our-vision-container {
+    grid-template-columns: 1fr; /* Stacks image and text vertically */
+    grid-template-rows: auto auto; /* Ensure vertical stacking */
+    padding: 1rem 1rem;
+    gap: 2rem; /* Reduce gap between image and text */
+    text-align: left;
+  }
+
+  .our-vision-image {
+    order: -1; /* Moves the image to the top */
+    height: 300px; /* Adjust image height for smaller screens */
+  }
+
+  .our-vision-heading {
+    font-size: 1.75rem; /* Adjust heading size for smaller screens */
+  }
+
+  .our-vision-paragraph {
+    font-size: 1rem; /* Adjust paragraph size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .our-vision-container {
+    padding: 1rem 1rem;
+    margin-top: 0px;
+  }
+
+  .our-vision-image {
+    height: 250px; /* Adjust image size for very small screens */
+  }
+
+  .our-vision-heading {
+    font-size: 1.5rem; /* Further adjust heading size for smaller screens */
+  }
+
+  .our-vision-paragraph {
+    font-size: 0.9rem; /* Ensure readability on small screens */
+  }
+}

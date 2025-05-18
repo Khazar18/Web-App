@@ -1,0 +1,38 @@
+.home-container {
+  margin-top: 9vh;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .hero-container,
+  .features-section,
+  .announcements-section {
+    padding: 3rem 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+
+  .features-grid,
+  .announcements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

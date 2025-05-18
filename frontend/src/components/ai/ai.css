@@ -1,0 +1,336 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .chat-toggle-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .chat-toggle-button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  }
+  
+  .bot-icon {
+    width: 60px;
+    height: 45px;
+    
+  }
+  
+  .chat-window {
+    width: 380px;
+    height: 80vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    padding: 0px 10px;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .chat-header .close-button:hover {
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 100%;
+    word-wrap: break-word; /* Ensure no overflow */
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+  
+  .bot-avatar, .user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bot-avatar img, .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .message-bubble {
+    background: #f0f0f0;
+    padding: 12px 16px;
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    color: #666;
+    max-width: 75%;  /* Set a max width to prevent overflow */
+    word-wrap: break-word;  /* Ensure long words wrap within the message */
+    white-space: pre-wrap;  /* Preserve whitespace and line breaks */
+  }
+  
+  .message.user .message-bubble {
+    background: var(--primary-color);
+    color: white;
+    max-width: 70%;
+  }
+  .message.user .message-bubble {
+    max-width: 70%;  /* Same for user messages */
+  }
+  
+  
+  .message-bubble p {
+    margin: 0;
+
+  }
+  
+  .message-bubble strong {
+    font-weight: bold;
+  }
+  
+  .message-bubble em {
+    font-style: italic;
+  }
+  
+  .input-form {
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid #eee;
+    background: #f9f9f9;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+  
+  .message-input:focus {
+    border-color:var(--primary-color);
+  }
+  
+  .upload-button, .send-button {
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .upload-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .send-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-button:hover, .send-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .send-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .loading span {
+    display: inline-block;
+    animation: dotAnimation 1.4s infinite ease-in-out both;
+  }
+  
+  .loading span:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  
+  .loading span:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+  
+  @keyframes dotAnimation {
+    0%, 80%, 100% { 
+      transform: scale(0);
+    } 
+    40% { 
+      transform: scale(1.0);
+    }
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+/* Cloud shape */
+.thinking-cloud {
+    position: absolute;
+    stroke: #000;
+    top: -50px;
+    left: 20px;  /* Position it on the left side */
+    background: linear-gradient(145deg, #d1b3ff, var(--primary-color));
+    color: white;
+    border-radius: 50% 50% 40% 40%; /* Cloud-like shape */
+    padding: 10px 20px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: cloudShape 2s 2s forwards; /* Cloud animation with delay */
+  }
+  
+  /* Bubble animation */
+  @keyframes bubbleGrow {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    30% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    60% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Cloud shape build-up */
+  @keyframes cloudShape {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* First ball (smallest) */
+  .thinking-cloud::before {
+    content: "";
+    position: absolute;
+    bottom: -25px;  /* Position it below the cloud */
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    stroke: #000;
+    stroke-width: 2px;
+    animation: ballAppear 1s forwards;
+  }
+  
+  /* Second ball (slightly larger) */
+  .thinking-cloud::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;  /* Position it below the cloud, but above the first ball */
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    stroke: #000;
+    stroke-width: 2px;
+    border-radius: 50%;
+    animation: ballAppear 1s 0.5s forwards; /* Delay the second ball */
+  }
+  
+  /* Animation for ball appearance */
+  @keyframes ballAppear {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .chat-header.typing .thinking-cloud {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .thinking-cloud span {
+    display: inline-block;
+    animation: bubbleAnimation 1.5s infinite;
+  }
+  
+  @keyframes bubbleAnimation {
+    0%, 100% { 
+      transform: translateY(0);
+    }
+    50% { 
+      transform: translateY(-5px);
+    }
+  }
+  

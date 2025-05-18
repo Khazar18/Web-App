@@ -1,0 +1,76 @@
+.features-section {
+  padding: 4rem 6rem;
+  background: #fff;
+}
+
+.features-title {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  background: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  height: 80px; /* Fixed height for all icons */
+  width: 80px; /* Fixed width for all icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem; /* Center the icon and add consistent spacing */
+}
+
+.feature-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* Ensures icons scale without distortion */
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.feature-subtitle {
+  color: #8e44ad;
+}
+
+.feature-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

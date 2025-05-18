@@ -1,0 +1,21 @@
+.profile-page {
+    min-height: 100vh;
+    background: #f9fafb;
+  }
+  
+  .profile-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .profile-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  

@@ -1,0 +1,49 @@
+/* Hero Styles */
+
+.about-us-hero-container {
+  position: relative;
+  width: 100vw;  /* Ensures full page width */
+  min-height: 30rem; /* Ensures full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../../../../assets/about_us.svg') no-repeat center;
+  background-size: cover; 
+  background-position: center;
+  left: 0;
+  right: 0;
+}
+
+.about-us-hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 3rem; /* Equivalent to text-5xl */
+  font-weight: bold;
+  color: #fff;
+}
+
+.highlight {
+  color: var(--primary-color); /* text-pink-400 */
+}
+
+.hero-paragraph {
+  font-size: 1.25rem; 
+  color: #e2e2e2; /* Darker shade for better readability */
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 4rem; /* Equivalent to md:text-6xl */
+  }
+
+  .hero-paragraph {
+    font-size: 1.5rem; /* Equivalent to md:text-2xl */
+  }
+}

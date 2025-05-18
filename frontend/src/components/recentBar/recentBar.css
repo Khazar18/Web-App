@@ -1,0 +1,146 @@
+.recent-container {
+  margin-top: 35px;
+  padding: 1.5rem;
+  width: 300px;
+  background-color: transparent;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 120px); /* Adjusted for better fit */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.recent-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+.recent-header img{
+  padding-bottom: 10px;
+}
+
+.recent-title {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  flex-shrink: 0;
+}
+
+.recent-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-right: 6px;
+  /* Add padding to prevent border clipping on hover */
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: -2px;
+  height: 100%; /* Take remaining height */
+}
+
+/* Customize scrollbar */
+.recent-posts::-webkit-scrollbar {
+  width: 4px;
+}
+
+.recent-posts::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.recent-posts::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.recent-posts::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Updated card styling */
+.recent-post {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  /* Add transform-origin to prevent border clipping */
+  transform-origin: center center;
+  /* Ensure cards stay above each other during hover */
+  position: relative;
+}
+
+.recent-post:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  /* Add z-index to ensure hovered card appears above others */
+  z-index: 1;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.post-acronym {
+  font-weight: 700;
+  color: #4b5563;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.post-likes {
+  color: #7e22ce;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.post-title {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recent-container {
+    width: 100%;
+    padding: 1rem;
+    position: static;
+    height: auto;
+  }
+
+  .recent-posts {
+    max-height: 400px;
+  }
+
+  .recent-post {
+    padding: 0.75rem;
+  }
+
+  .post-acronym {
+    font-size: 1rem;
+  }
+
+  .post-title {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recent-title {
+    font-size: 1.1rem;
+  }
+
+  .post-header {
+    margin-bottom: 0.5rem;
+  }
+}

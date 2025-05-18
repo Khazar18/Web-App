@@ -1,0 +1,164 @@
+
+
+.accordion-wrapper {
+  outline: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  padding: 0 20px; 
+}
+
+.accordion-item {
+  outline: none;
+  border-bottom: 0.1rem solid #ddd;
+  background-color: transparent;
+}
+
+.accordion-item.open {
+  outline: none;
+  background-color: #f9f9f9; 
+  border: none;
+}
+
+.accordion-trigger {
+  outline: none;
+  border: none; 
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  background-color: transparent;
+  color: #333;
+}
+
+.accordion-trigger.active {
+  outline: none;
+  color: var(--primary-color); 
+  border: none;
+  background-color: transparent;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  margin-left: auto;
+}
+
+.accordion-content {
+  outline: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border: none;
+  background-color: transparent;
+}
+
+.accordion-content.expanded {
+  outline: none;
+  max-height: 200px; 
+  border: none;
+}
+
+.accordion-content-inner {
+  outline: none;
+  padding: 16px;
+  font-size: 16px;
+  color: var(--paragraph-color);
+  border: none;
+  background-color: transparent;
+}
+
+.faq-container {
+  outline: none;
+  padding: 40px 20px;
+  border: none;
+}
+
+.faq-title {
+  outline: none;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  padding-left:40px;
+  text-align: left;
+}
+
+.highlight {
+  outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: var(--primary-color);
+}
+
+.accordion-trigger {
+  border: none;
+  outline: none; 
+  box-shadow: none; 
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:active,
+.accordion-trigger:focus-visible {
+  outline: none; 
+  box-shadow: none; 
+}
+
+@media (max-width: 768px) {
+  .accordion-trigger {
+    font-size:16px;
+  }
+  .accordion-wrapper {
+    padding:0px;
+    max-width: 100%;
+  }
+
+  .faq-title {
+    font-size: 28px;
+    padding-left:0px;
+    margin:0px;
+  }
+
+  .accordion-trigger {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .accordion-content-inner {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-trigger {
+    font-size:12px;
+  }
+  .accordion-wrapper{
+    padding:0px;
+    max-width:100%;
+  }
+  .faq-container {
+    padding: 20px 10px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+    padding-left:0px;
+    margin:0px;
+  }
+
+  .accordion-trigger {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .accordion-content-inner {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
